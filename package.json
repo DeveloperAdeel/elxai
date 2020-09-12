@@ -1,0 +1,26 @@
+{
+  "name": "elxai",
+  "version": "1.0.0",
+  "description": "ELX Server Worker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DeveloperAdeel/elxai.git"
+  },
+  "keywords": [
+    "elx",
+    "elxai",
+    "elx.ai",
+    "elx",
+    "worker"
+  ],
+  "author": "Adeel Khan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DeveloperAdeel/elxai/issues"
+  },
+  "homepage": "https://github.com/DeveloperAdeel/elxai#readme"
+}
