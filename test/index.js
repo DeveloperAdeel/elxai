@@ -1,7 +1,8 @@
-const { ELX } = require("elxai");
+const { ELX } = require("index");
 ELX.listen().then((req) => {
     // Do you stuff
 });
+
 let body = "Hello World!";
 let options = {
     status: 200, // Default is 200
@@ -14,6 +15,7 @@ let options = {
             expiry: new Date(
                 new Date().getTime() + 1000 * 60 * 60 * 1
             ).toGMTString(),
+            domain: "exvous.io",
         },
     ],
 };

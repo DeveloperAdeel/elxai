@@ -5,6 +5,7 @@ Private Worker for ELX Web Server
 # Installation
 
 `npm i elxai`
+or
 `npm i elxai --save`
 
 # Usage
@@ -21,6 +22,11 @@ ELX.listen().then((req) => {
 ## Sending the response
 
 ```
+const { ELX } = require("./elx");
+ELX.listen().then((req) => {
+    // Do you stuff
+});
+
 let body = "Hello World!";
 let options = {
     status: 200, // Default is 200
@@ -33,15 +39,17 @@ let options = {
             expiry: new Date(
                 new Date().getTime() + 1000 * 60 * 60 * 1
             ).toGMTString(),
+            domain: "exvous.io",
         },
     ],
 };
 
-ELX.send({ body, options }).then((result) => {
+ELX.send(body, options).then((result) => {
     // Check the result
 });
+
 ```
 
 ## Warning
 
-* *console.log* is not available in elxai.
+* *console.log* is not available in elxai, rather you are required to call `ELX.send(body, { options })` to send response/log.
