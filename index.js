@@ -101,10 +101,16 @@ class ELX {
         const stdout = await ELX.stdin();
         // app.stdout = console.log;
         // console.log = undefined;
+        let body;
+        try {
+            body = JSON.parse(decodeURIComponent(stdout[2]));
+        } catch (err) {
+            body = decodeURIComponent(stdout[2]);
+        }
         return {
             head: stdout[0],
             headers: stdout[1],
-            body: stdout[2],
+            body,
         };
     }
 
